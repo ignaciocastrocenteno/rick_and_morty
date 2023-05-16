@@ -1,8 +1,9 @@
-import Card from "./Card";
+import Card from "../Card/Card";
+import styles from "../Cards/Cards.module.css";
 
 export default function Cards({characters}) {
   return (
-    <div>
+    <section className={styles.contentWrapper}>
       {characters.map((character) => {
         return (
           <Card
@@ -16,6 +17,6 @@ export default function Cards({characters}) {
           />
         );
       })}
-    </div>
+    </section>
   );
 }
