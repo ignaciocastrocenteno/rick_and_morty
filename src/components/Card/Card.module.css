@@ -4,13 +4,20 @@
   border-radius: 8px;
   box-sizing: border-box;
   margin-bottom: 2rem;
+  width: 21rem;
+  position: relative;
+}
+
+.box {
+  object-fit: fill;
+  width: 100%;
+  height: 300px;
 }
 
 .characterImg {
-  width: 80%;
-  height: 35vh;
-  padding: 0.5rem;
-  margin-left: 1.8rem;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
 }
 
 .characterInfo {
@@ -30,6 +37,13 @@
   border-top: none;
 }
 
+.redCrossContainer {
+  width: 0;
+  margin-left: 93%;
+  position: absolute;
+  top: -3px;
+}
+
 .redCross {
   background-color: red;
   font-weight: 700;
@@ -39,5 +53,5 @@
 
 .redCross:hover {
   background-color: purple;
-  color: #000;
+  color: #ffc500;
 }

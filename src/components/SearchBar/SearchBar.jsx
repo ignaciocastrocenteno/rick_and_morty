@@ -1,4 +1,4 @@
-import styles from "../SearchBar/SearchBar.module.css";
+import styles from "./SearchBar.module.css";
 import logo from "../assets/intro-wallpaper.png";
 
 export default function SearchBar({onSearch}) {

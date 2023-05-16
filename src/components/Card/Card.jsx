@@ -1,4 +1,4 @@
-import styles from "../Card/Card.module.css";
+import styles from "../card/Card.module.css";
 
 /* Acá estamos haciendo un destructuring para luego usar directamente los parámetros, sino hay que accederlo como obj */
 export default function Card({
@@ -12,7 +12,7 @@ export default function Card({
 }) {
   return (
     <article className={styles.card}>
-      <div>
+      <div className={styles.redCrossContainer}>
         <button
           className={styles.redCross}
           onClick={() => alert("Emulamos que se cierra la card")}
@@ -20,7 +20,9 @@ export default function Card({
           X
         </button>
       </div>
-      <img className={styles.characterImg} src={image} alt="foto-personaje" />
+      <div className={styles.box}>
+        <img className={styles.characterImg} src={image} alt="foto-personaje" />
+      </div>
       <div className={styles.characterInfo}>
         <h2>{name}</h2>
         <h2>{species}</h2>
