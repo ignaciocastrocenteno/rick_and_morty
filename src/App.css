@@ -16,14 +16,17 @@ body {
 }
 
 footer {
-  width: 100vw;
-  height: 5vh;
+  margin-top: 13rem;
   background-color: #0e12e2;
   border-top: 2px solid #000;
   color: #fff;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+}
+
+small {
+  height: 2.7rem;
 }
 
 #author {

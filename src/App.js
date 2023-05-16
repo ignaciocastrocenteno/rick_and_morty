@@ -1,7 +1,7 @@
 import "./App.css";
 /* import Card from "./components/Card.jsx"; */
-import Cards from "./components/Cards/Cards.jsx";
-import SearchBar from "./components/SearchBar/SearchBar.jsx";
+import Cards from "./components/cards/Cards.jsx";
+import SearchBar from "./components/searchBar/SearchBar.jsx";
 import characters, {Rick} from "./data.js";
 
 function App() {
@@ -24,14 +24,11 @@ function App() {
             onClose={() => window.alert('Emulamos que se cierra la card')}
          /> */}
       <footer>
-        <div id="author">
-          <small>
-            <em>
-              {" "}
-              &copy; Copyright 2023, Ignacio Castro Centeno. All rights reserved
-            </em>
-          </small>
-        </div>
+        <small id="author">
+          <em>
+            &copy; Copyright 2023, Ignacio Castro Centeno. All rights reserved
+          </em>
+        </small>
       </footer>
     </div>
   );
