@@ -3,7 +3,7 @@
 } */
 
 body {
-  background-image: url(./components/assets/sunset-and-car.png);
+  background-image: url(../src/components/assets/sunset-and-car.png);
   background-size: 100vw 110vh;
   background-repeat: no-repeat;
   background-position: top;
@@ -15,23 +15,19 @@ body {
   overflow-y: scroll;
 }
 
+main {
+  min-width: 100%;
+  min-height: 71.2vh;
+}
+
 footer {
-  margin-top: 13rem;
+  margin-top: 9rem;
   background-color: #0e12e2;
   border-top: 2px solid #000;
   color: #fff;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-}
-
-small {
-  height: 2.7rem;
-}
-
-#author {
-  font-weight: 700;
-  margin-top: 0.65rem;
 }
 
 /* ! Me faltan hacer los media queries. Usar los breakpoint de referencia de Bootstrap */

@@ -1,0 +1,9 @@
+.small {
+  height: 2rem;
+  padding-top: 1rem;
+}
+
+.author {
+  font-weight: 700;
+  margin-top: 0.65rem;
+}

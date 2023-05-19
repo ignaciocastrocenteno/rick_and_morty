@@ -16,7 +16,6 @@
 }
 
 .searchButton {
-  margin-left: -4.2rem;
   height: 2.2rem;
   background-color: red;
   color: #fff;
@@ -26,12 +25,12 @@
 
 .searchInput {
   height: 2.2rem;
-  width: 19rem;
+  width: 15rem;
   border-radius: 4px;
   border: 2px solid grey;
 }
 
 .searchWrapper {
   min-width: 15vw;
-  margin-right: 3rem;
+  margin-right: 5.5rem;
 }
