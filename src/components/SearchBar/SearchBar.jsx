@@ -1,5 +1,5 @@
 import styles from "./SearchBar.module.css";
-import logo from "../assets/intro-wallpaper.png";
+import logo from "../assets/rick-and-morty-logo.png";
 
 export default function SearchBar({onSearch}) {
   return (
