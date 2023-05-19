@@ -1,7 +1,14 @@
 import styles from "./SearchBar.module.css";
 import logo from "../assets/rick-and-morty-logo.png";
+import {useState} from "react";
 
 export default function SearchBar({onSearch}) {
+  let [id, setId] = useState("");
+
+  const handleChange = (event) => {
+    setId((id = event.target.value));
+  };
+
   return (
     <nav className={styles.mainNavbar}>
       <img className={styles.logo} src={logo} alt="rick_and_morty_logo" />
@@ -9,9 +16,10 @@ export default function SearchBar({onSearch}) {
         <input
           className={styles.searchInput}
           type="search"
-          placeholder="Ingrese su personaje"
+          placeholder="ID del personaje"
+          onChange={handleChange}
         />
-        <button className={styles.searchButton} onClick={onSearch}>
+        <button className={styles.searchButton} onClick={() => onSearch(id)}>
           Agregar
         </button>
       </div>

@@ -9,14 +9,14 @@ export default function Card({
   gender,
   origin,
   image,
+  onClose,
 }) {
   return (
     <article className={styles.card}>
       <div className={styles.redCrossContainer}>
-        <button
-          className={styles.redCross}
-          onClick={() => alert("Emulamos que se cierra la card")}
-        >
+        {/* En este caso, no alcanza con enviar el onClose handler porque 
+        que necesitamos que llame a su definición y no que se invoque la función. */}
+        <button className={styles.redCross} onClick={() => onClose(id)}>
           X
         </button>
       </div>
