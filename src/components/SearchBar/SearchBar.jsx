@@ -27,10 +27,12 @@ export default function SearchBar({onSearch}) {
       <div className={styles.searchWrapper}>
         <input
           className={styles.searchInput}
-          type="search"
+          type="number"
           placeholder="Ingresar el ID del personaje (1-826)"
           onChange={handleChange}
           value={id}
+          /* Aplicando RegEx para sólo aceptar números */
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
         />
         <button
           className={styles.searchButton}

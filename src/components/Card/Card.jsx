@@ -21,6 +21,11 @@ export default function Card({
           X
         </button>
       </div>
+      <div className={styles.idWrapper}>
+        <div className={styles.characterIdBg}>
+          <div className={styles.characterId}>{id}</div>
+        </div>
+      </div>
       <div className={styles.box}>
         <img className={styles.characterImg} src={image} alt="foto-personaje" />
       </div>

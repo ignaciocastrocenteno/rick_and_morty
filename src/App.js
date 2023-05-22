@@ -51,13 +51,14 @@ function App() {
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
         ></Route>
+        <Route path="/" element={<Navigate to="/home" replace />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:id" element={<Detail />}></Route>
-        {/*  <Route path="/notFound" element={<NotFound />}></Route>
+        {/* <Route path="/notFound" element={<NotFound />}></Route>
         <Route path="*" element={<Navigate to="/notfound" replace />}></Route> */}
       </Routes>
       {/* <header></header>
-      <main>
+      /* <main>
         <Cards characters={characters} onClose={onClose} />
       </main> */}
     </div>
