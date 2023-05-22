@@ -34,9 +34,6 @@ export default function Card({
         <Link to={`/detail/${id}`}>
           <h2>{name}</h2>
         </Link>
-        <h2>{species}</h2>
-        <h2>{gender}</h2>
-        <h2>{origin}</h2>
       </div>
     </article>
   );

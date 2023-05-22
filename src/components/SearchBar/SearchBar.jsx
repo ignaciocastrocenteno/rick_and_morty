@@ -32,6 +32,8 @@ export default function SearchBar({onSearch}) {
           onChange={handleChange}
           value={id}
           /* Aplicando RegEx para sólo aceptar números */
+          step={1}
+          required
           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
         />
         <button

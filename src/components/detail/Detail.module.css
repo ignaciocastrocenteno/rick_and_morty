@@ -1,0 +1,39 @@
+.cardDetailContainer {
+  background-color: #fff;
+  height: 80vh;
+  margin: 3rem;
+  display: flex;
+}
+
+.cardDetailBackground {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.cardImageBackground {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImage {
+  border-radius: 50%;
+  width: 450px;
+}
+
+ul li {
+  padding: 1.2rem;
+}
+
+.cardDetailBackground > h1 {
+  margin: 3rem;
+}
