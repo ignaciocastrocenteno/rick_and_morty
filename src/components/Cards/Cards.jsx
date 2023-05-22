@@ -7,7 +7,8 @@ export default function Cards({characters, onClose}) {
       {characters.map((character) => {
         return (
           <Card
-            key={character.id}
+            /* Acá no es necesario usar una key para identificar cada <Card /> porque
+            alcanza con el ID que vamos a enviarle por props. */
             id={character.id}
             name={character.name}
             status={character.status}
@@ -16,7 +17,7 @@ export default function Cards({characters, onClose}) {
             origin={character.origin.name}
             image={character.image}
             /* Sacado del componente Card.jsx porque no es 'dry code'.
-            Si los eventos fuesen diferentes ahí si justifica el cambio. */
+              Si los eventos fuesen diferentes ahí si justifica el cambio. */
             onClose={onClose}
           />
         );

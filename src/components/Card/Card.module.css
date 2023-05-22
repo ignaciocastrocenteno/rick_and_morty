@@ -54,4 +54,5 @@
 .redCross:hover {
   background-color: purple;
   color: #ffc500;
+  cursor: pointer;
 }

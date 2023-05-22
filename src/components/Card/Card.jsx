@@ -1,4 +1,5 @@
 import styles from "../card/Card.module.css";
+import {Link} from "react-router-dom";
 
 /* Acá estamos haciendo un destructuring para luego usar directamente los parámetros, sino hay que accederlo como obj */
 export default function Card({
@@ -24,7 +25,10 @@ export default function Card({
         <img className={styles.characterImg} src={image} alt="foto-personaje" />
       </div>
       <div className={styles.characterInfo}>
-        <h2>{name}</h2>
+        {/* Para la próxima, observar de no enviar el 'wildcard' del param */}
+        <Link to={`/detail/${id}`}>
+          <h2>{name}</h2>
+        </Link>
         <h2>{species}</h2>
         <h2>{gender}</h2>
         <h2>{origin}</h2>

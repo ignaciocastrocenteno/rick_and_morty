@@ -1,10 +1,13 @@
 import "./App.css";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import Cards from "./components/cards/Cards.jsx";
-/* import characters, {Rick} from "./data.js"; */
 import Nav from "./components/nav/Nav";
 import Footer from "../src/components/footer/Footer.jsx";
 import axios from "axios";
+import {Routes, Route, Navigate} from "react-router-dom";
+import About from "../src/components/about/About.jsx";
+import NotFound from "../src/components/notFound/NotFound.jsx";
+import Detail from "./components/detail/Detail";
 
 function App() {
   let [characters, setCharacters] = useState([]);
@@ -42,15 +45,21 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <Nav onSearch={onSearch} />
-      </header>
+      <Nav onSearch={onSearch} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        ></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/detail/:id" element={<Detail />}></Route>
+        {/*  <Route path="/notFound" element={<NotFound />}></Route>
+        <Route path="*" element={<Navigate to="/notfound" replace />}></Route> */}
+      </Routes>
+      {/* <header></header>
       <main>
         <Cards characters={characters} onClose={onClose} />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+      </main> */}
     </div>
   );
 }
