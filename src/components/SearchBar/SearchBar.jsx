@@ -33,6 +33,8 @@ export default function SearchBar({onSearch}) {
           value={id}
           /* Aplicando RegEx para sólo aceptar números */
           step={1}
+          min={1}
+          max={826}
           required
           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
         />
