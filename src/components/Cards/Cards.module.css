@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 7rem 3rem 1rem;
-  margin-bottom: 0;
+  padding: 9rem 7rem;
+  padding-bottom: 2rem;
   /* ? flex-direction + flex-wrap shorthand property */
   flex-flow: row wrap;
 }

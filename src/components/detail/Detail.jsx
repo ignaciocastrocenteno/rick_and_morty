@@ -21,25 +21,27 @@ export default function Detail() {
   }, [id]);
 
   return (
-    <div className={styles.cardDetailContainer}>
-      <div className={styles.cardDetailBackground}>
-        <h1>Information about the character</h1>
-        <ul>
-          <li>{`STATUS - ${character.status}`}</li>
-          <li>{`GENDER - ${character.gender}`}</li>
-          <li>{`SPECIES - ${character.species}`}</li>
-          {/* FIJARSE POR QUÉ NO FUNCIONA */}
-          {/* <li>{`ORIGIN - ${character.origin.name}`}</li> */}
-        </ul>
+    <div className={styles.cardDetail}>
+      <div className={styles.cardDetailContainer}>
+        <div className={styles.cardDetailBackground}>
+          <h1>Information about the character</h1>
+          <ul>
+            <li>{`STATUS - ${character.status}`}</li>
+            <li>{`GENDER - ${character.gender}`}</li>
+            <li>{`SPECIES - ${character.species}`}</li>
+            {/* FIJARSE POR QUÉ NO FUNCIONA */}
+            {/* <li>{`ORIGIN - ${character.origin.name}`}</li> */}
+          </ul>
+        </div>
+        <div className={styles.cardImageBackground}>
+          <img
+            src={character.image}
+            alt="character"
+            className={styles.cardImage}
+          />
+        </div>
+        <div></div>
       </div>
-      <div className={styles.cardImageBackground}>
-        <img
-          src={character.image}
-          alt="character"
-          className={styles.cardImage}
-        />
-      </div>
-      <div></div>
     </div>
   );
 }

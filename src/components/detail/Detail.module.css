@@ -37,3 +37,9 @@ ul li {
 .cardDetailBackground > h1 {
   margin: 3rem;
 }
+
+.cardDetail {
+  position: fixed;
+  margin-top: 4.1%;
+  margin-left: 12.7%;
+}
