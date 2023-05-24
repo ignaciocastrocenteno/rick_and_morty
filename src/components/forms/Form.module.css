@@ -1,0 +1,84 @@
+.formContainer {
+  background-color: #757575;
+  position: absolute;
+  left: 33%;
+  top: 8%;
+  border: 2px solid #000;
+  border-radius: 3%;
+  overflow-y: hidden;
+}
+
+.formImage {
+  width: 20rem;
+  border-radius: 50%;
+  position: relative;
+  bottom: 14rem;
+  right: 3rem;
+  border: 4px solid yellow;
+}
+
+.formElementsWrapper {
+  position: relative;
+  bottom: 12.6rem;
+  left: -1rem;
+}
+
+.formElements {
+  margin-bottom: 1.2rem;
+}
+
+.formInputText {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+.formInputField {
+  position: relative;
+  font-size: 18px;
+  margin-top: 0.8rem;
+  border-radius: 12px;
+  width: 16rem;
+}
+
+button.submit {
+  position: relative;
+  bottom: -1rem;
+  left: 3rem;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 0.55rem;
+  width: 9rem;
+  margin-top: 1rem;
+  background-color: #0cc80c;
+  border: 3px solid gold;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.errorEmail {
+  width: 14rem;
+  position: relative;
+  right: -1rem;
+  color: #bd0202;
+  font-weight: 500;
+}
+
+.errorPassword {
+  width: 33rem;
+  position: relative;
+  right: 8rem;
+  color: #bd0202;
+  font-weight: 500;
+}
+
+.example {
+  margin: 3rem 2rem;
+  margin-bottom: 0rem;
+  width: 12vw;
+  height: 30vh;
+  padding: 15rem 12rem;
+}

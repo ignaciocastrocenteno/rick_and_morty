@@ -1,29 +1,42 @@
 import "./App.css";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Cards from "./components/cards/Cards.jsx";
 import Nav from "./components/nav/Nav";
-import Footer from "../src/components/footer/Footer.jsx";
 import axios from "axios";
-import {Routes, Route, Navigate} from "react-router-dom";
+import {Routes, Route, useNavigate} from "react-router-dom";
 import About from "../src/components/about/About.jsx";
-import NotFound from "../src/components/notFound/NotFound.jsx";
+// import NotFound from "../src/components/notFound/NotFound.jsx";
 import Detail from "./components/detail/Detail";
+import Form from "./components/forms/Form.jsx";
 
 function App() {
   let [characters, setCharacters] = useState([]);
 
-  /* const example = {
-    id: 1,
-    name: "Rick Sanchez",
-    status: "Alive",
-    species: "Human",
-    gender: "Male",
-    origin: {
-      name: "Earth (C-137)",
-      url: "https://rickandmortyapi.com/api/location/1",
-    },
-    image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-  }; */
+  const [access, setAccess] = useState(false);
+  const ADMIN_EMAIL = "test@gmail.com";
+  const ADMIN_PASSWORD = "Abcd1234$";
+
+  const navigate = useNavigate();
+
+  // App.js
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
+
+  const login = (userData) => {
+    if (
+      userData.email === ADMIN_EMAIL &&
+      userData.password === ADMIN_PASSWORD
+    ) {
+      setAccess(true);
+      alert("Access Granted");
+      setTimeout(() => {
+        navigate("/home");
+      }, 1300);
+    } else {
+      alert("Invalid Form Credential. Try again!");
+    }
+  };
 
   function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`).then(({data}) => {
@@ -47,20 +60,16 @@ function App() {
     <div className="App">
       <Nav onSearch={onSearch} />
       <Routes>
+        <Route path="/" element={<Form login={login} />}></Route>
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
         ></Route>
-        <Route path="/" element={<Navigate to="/home" replace />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:id" element={<Detail />}></Route>
         {/* <Route path="/notFound" element={<NotFound />}></Route>
         <Route path="*" element={<Navigate to="/notfound" replace />}></Route> */}
       </Routes>
-      {/* <header></header>
-      /* <main>
-        <Cards characters={characters} onClose={onClose} />
-      </main> */}
     </div>
   );
 }

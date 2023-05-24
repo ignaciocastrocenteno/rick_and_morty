@@ -12,7 +12,7 @@ body {
   color: #000;
   /* ? Here we're setting up the horizontal scroll-bar as hidden */
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 main {
